@@ -2,8 +2,16 @@
     <head>
         <title>Wave Function Collapse</title>
     </head>
+    <style>
+        #canvas {border: 2px solid #000000}
+    </style>
     <body>
-        <canvas id="canvas" style="border: 2px solid #000000"></canvas>
-        <script src="wfc_v2.js"></script>
+        <script src="wave-function-collapse.js"></script>
+        <script>
+            wfc.canvas('canvas') //WFC will create a canvas element automatically. This sets the ID to "canvas". Default is "wfc-canvas"
+            wfc.size(10) //Sets the size of the canvas to 10. Default is 14
+            wfc.start() //Starts the generation
+            console.log(wfc.tiles()) //Logs all of the tiles as an array (x, y, and tiles). '#' means there is no tile. '@' means there is a road tile, and '%' means there a building tile
+        </script>
     </body>
 </html>
